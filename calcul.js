@@ -34,12 +34,6 @@ let result = 0
 let joinFinalCalcul = null
 
 
-
-
-
-
-
-
 /*  Partie Calcul - Création d'un noeud qui va écrire le résultat dans le DOM */
 function createNodes(result) {
     
