@@ -2,20 +2,32 @@
 
 body{
     background-color: rgb(255, 208, 191);
+    
+   
+}
+
+main{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+
 }
 
 /* Grand container */
 
 .container{
     box-shadow: 2px 2px 10px 4px rgb(184, 184, 184);
-    background-color: rgb(33, 47, 87);    
+    background-color: rgb(33, 47, 87);  
     display: flex;
     flex-direction: column;
     align-items: center ;
-    height: 400px;
+    justify-content: center;  
+    
+    height: 450px;
     width: 260px;
     border-radius: 10px;
 }
@@ -25,9 +37,10 @@ body{
 /* Ecran */
 
 .container_screen{
+    font-size: 1em;
     margin-top: 10px;
     background-color: rgb(150, 167, 120);
-    height: 65px;
+    height: 70px;
     width: 240px;
     border-radius: 4px ;
 }
@@ -36,34 +49,61 @@ body{
 /* Touches bouton */
 
 .container_button{
-    margin-top: 25px;
-    display : inline-flex ;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    width: 240px;
-    height: 285px ;
 
+    margin-top: 30px;
+    width: 15em;
+    height: 20em;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 5px 5px; 
+    grid-template-areas: 
+    "seven eight nine plus"
+    "four five six moins"
+    "one two three multiply"
+    "delete zero equal division"; 
 }
+.division { grid-area: division; }
+.equal { grid-area: equal; }
+.zero { grid-area: zero; }
+.delete { grid-area: delete; }
+.six { grid-area: six; }
+.multiply { grid-area: multiply; }
+.moins { grid-area: moins; }
+.plus { grid-area: plus; }
+.three { grid-area: three; }
+.two { grid-area: two; }
+.one { grid-area: one; }
+.five { grid-area: five; }
+.four { grid-area: four; }
+.nine { grid-area: nine; }
+.eight { grid-area: eight; }
+.seven { grid-area: seven; }
+
+
+
 
 .button{
-    background-color: rgb(165, 164, 165); 
+    
+    background-color: rgb(207, 207, 207); 
 }
 
-button{
-    height: 50px ;
-    width: 55px;
-    border-radius: 10px;
-    margin-left: 3px;
+button { 
+    font-size: 1.3em;
+    border: none;
+    border-radius: 7px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
-    font-size: 18px;
+}
+
+button:hover{
+    background-color: rgb(230, 225, 230);
+
 }
 
 
 
-#equal{
-    background-color: rgb(105, 110, 110);
-    width: 110px;
+.equal{
+    background-color: rgb(95, 114, 139);
 }
 
 .nodeResult{
